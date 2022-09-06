@@ -1,0 +1,21 @@
+<app-divider>Таблица</app-divider>
+
+<app-table
+  [data]="data"
+  [headers]="headers"
+  class="striped celled"
+></app-table>
+
+<app-divider>Вкладки</app-divider>
+
+<app-tabs>
+  <a routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="item">
+    Биография
+  </a>
+  <a routerLink="companies" routerLinkActive="active" class="item">
+    Компании
+  </a>
+  <a routerLink="partners" routerLinkActive="active" class="item">
+    Партнёры
+  </a>
+</app-tabs>

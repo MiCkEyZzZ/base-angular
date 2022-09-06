@@ -1,0 +1,17 @@
+<app-divider>Модальное окно</app-divider>
+
+<button
+  class="ui secondary basic button"
+  (click)="onClick()"
+>Открыть</button>
+<app-modal (close)="onClick()" *ngIf="modalOpen">
+  <div modalTitle>Модальное окно</div>
+  <p>Какой-то контент для модального окна!</p>
+  <ng-container modalFooter>
+    <button class="ui button" (click)="onClick()">Хорошо</button>
+  </ng-container>
+</app-modal>
+
+<app-divider>Аккордион</app-divider>
+
+<app-accordion [data]="items"></app-accordion>
